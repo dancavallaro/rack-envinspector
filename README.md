@@ -13,4 +13,9 @@ Then in `config.ru`:
 
 	use Rack::EnvInspector
 
+Or in a Rails app, add the following to `application.rb`, or to an appropriate
+environment-specific config file:
+
+	config.middleware.use "Rack::EnvInspector"
+
 Then, see a JSON dump of the Rack environment by appending `?inspect` to any URL.
