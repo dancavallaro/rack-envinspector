@@ -6,8 +6,11 @@ Gem::Specification.new do |s|
   s.author = 'Dan Cavallaro'
   s.email = 'dan.t.cavallaro@gmail.com'
   s.homepage = 'https://github.com/dancavallaro/rack-envinspector'
-  s.files = Dir['{lib/**/*}'] + %w{README.md rack-envinspector.gemspec}
+
+  s.files = `git ls-files`.split("\n")
+  s.test_files = `git ls-files -- spec/*`.split("\n")
 
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rack'
+  s.add_development_dependency 'rake'
 end
