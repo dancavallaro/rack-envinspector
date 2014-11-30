@@ -7,7 +7,7 @@ appending a query parameter to any of your app's URLs.
 
 To use Rack::EnvInspector, add the following to your Gemfile:
 
-	gem 'rack-envinspector', :github => 'dancavallaro/rack-envinspector'
+	gem 'rack-envinspector'
 
 Then in `config.ru`:
 
