@@ -17,7 +17,6 @@ describe Rack::EnvInspector do
   it "should return environment dump with query param" do
     response = request.get '/?inspect'
     env = JSON.parse(response.body)
-    puts env
 
     expect(env["PATH_INFO"]).to eq("/")
     expect(env["QUERY_STRING"]).to eq("inspect")
