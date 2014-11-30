@@ -11,7 +11,7 @@ module Rack
       request = Rack::Request.new(env)
 
       if request.params.key? 'inspect'
-        [200, {'Content-Type' => 'application/json'}, [env.to_json]]
+        [200, {'Content-Type' => 'application/json'}, [JSON.generate(env)]]
       else
         @app.call(env)
       end
